@@ -1,26 +1,25 @@
 import React, { useState } from "react";
-import "./Pizza.css";
-import pizzaImg from "./pizza.jpg";
+import "../styles/Pizza.css";
+import pizzaImg from "../pizza.jpg";
 
 const Pizza = () => {
   const [size, setSize] = useState(0);
   const [price, setPrice] = useState(0);
 
   return (
-    <div>
+    <div className="pizza">
       <label htmlFor="size" className="size">
-        Rozmiar (średnica):
+        Rozmiar (średnica[cm]):
         <input
           type="number"
           value={size}
           onChange={(e) => setSize(e.target.value)}
           name="size"
           id="size"
-        />{" "}
-        cm
+        />
       </label>
       <label htmlFor="price" className="price">
-        Cena:
+        Cena [zł]:
         <input
           type="number"
           value={price}
@@ -29,8 +28,9 @@ const Pizza = () => {
           id="price"
         />
       </label>
-      <div className="img">
+      <div className="result">
         <img src={pizzaImg} alt="Pizza img" />
+        <h3>XX.XX zł/m2</h3>
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+ul {
+  margin-top: 5rem;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+input {
+  border-radius: 0.8rem;
+  border-color: black;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}

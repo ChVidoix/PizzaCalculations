@@ -1,0 +1,25 @@
+label,
+.price {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.pizza {
+  width: 25rem;
+  padding: 20px;
+  margin: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+}
