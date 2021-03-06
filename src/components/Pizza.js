@@ -7,7 +7,7 @@ const Pizza = ({ name, id }) => {
   const [size, setSize] = useState(0);
   const [price, setPrice] = useState(0);
   const [result, setResult] = useState(0);
-  const { deletePizza } = useContext(AppContext);
+  const { deletePizza, setIndicator, bestId } = useContext(AppContext);
 
   const handleInputChange = (e) => {
     if (e.target.name === "price") {
@@ -17,17 +17,21 @@ const Pizza = ({ name, id }) => {
     }
   };
 
-  const calculateRasult = () => {
+  const calculateResult = () => {
     const area = Math.PI * Math.pow(size / 200, 2);
     const value = Math.round((price / area) * 100) / 100;
-    if (value) setResult(value);
-    else setResult(0);
+    if (value) {
+      setResult(value);
+    } else setResult(0);
+
+    setIndicator(id, value);
   };
 
-  useEffect(calculateRasult, [size, price]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(calculateResult, [size, price]);
 
   return (
-    <div className="pizza">
+    <div className={bestId === id ? "best pizza" : "pizza"}>
       <div className="heading">
         <h2>{name}</h2>
         <button className="remove" onClick={() => deletePizza(id)}>

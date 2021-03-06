@@ -5,6 +5,10 @@
   justify-content: flex-end;
 }
 
+.price {
+  margin-top: 2px;
+}
+
 .size > label,
 .price > label {
   width: 50%;
@@ -27,7 +31,7 @@
 
 .result {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   height: 80%;
@@ -44,7 +48,7 @@
 
 img {
   margin-top: 10px;
-  width: 200px;
+  width: 100px;
 }
 
 h2 {
@@ -55,4 +59,10 @@ h2 {
 
 h3 {
   margin: 0;
+  font-size: 1.5rem;
+}
+
+.best {
+  border: 9px solid #ff9933;
+  border-radius: 1rem;
 }
