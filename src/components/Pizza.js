@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "../styles/Pizza.css";
 import pizzaImg from "../pizza.jpg";
+import { AppContext } from "../AppContext";
 
-const Pizza = ({ name }) => {
+const Pizza = ({ name, id }) => {
   const [size, setSize] = useState(0);
   const [price, setPrice] = useState(0);
   const [result, setResult] = useState(0);
+  const { deletePizza } = useContext(AppContext);
 
   const handleInputChange = (e) => {
     if (e.target.name === "price") {
@@ -26,7 +28,12 @@ const Pizza = ({ name }) => {
 
   return (
     <div className="pizza">
-      <h2>{name}</h2>
+      <div className="heading">
+        <h2>{name}</h2>
+        <button className="remove" onClick={() => deletePizza(id)}>
+          Usuń
+        </button>
+      </div>
       <div className="size">
         <label htmlFor="size">Rozmiar (średnica[cm]):</label>
         <input

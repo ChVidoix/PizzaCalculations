@@ -33,6 +33,15 @@
   height: 80%;
 }
 
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove {
+  width: 25%;
+}
+
 img {
   margin-top: 10px;
   width: 200px;

@@ -4,7 +4,7 @@ import "../styles/AddPizza.css";
 
 const AddPizza = () => {
   const [name, setName] = useState("");
-  const addPizza = useContext(AppContext);
+  const { addPizza } = useContext(AppContext);
 
   const handleClick = () => {
     if (name.length > 0) {
@@ -23,6 +23,7 @@ const AddPizza = () => {
         type="text"
         value={name}
         onChange={(e) => setName(e.target.value)}
+        maxLength={19}
         placeholder="podaj nazwę pizzy..."
       />
     </div>
