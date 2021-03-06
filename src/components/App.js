@@ -14,8 +14,8 @@ function App() {
     </ul>
   );
 
-  const addPizza = () => {
-    setPizzaList([...pizzaList].concat(<Pizza />));
+  const addPizza = (name) => {
+    setPizzaList([...pizzaList].concat(<Pizza name={name} />));
   };
 
   return (
