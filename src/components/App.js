@@ -28,8 +28,6 @@ function App() {
   };
 
   const deletePizza = (id) => {
-    console.log(id);
-    console.log(pizzaList);
     setPizzaList([...pizzaList].filter((item) => item.id !== id));
   };
 
