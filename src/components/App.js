@@ -49,12 +49,15 @@ function App() {
   const checkBest = () => {
     const best = { id: -1, value: 999999 };
     pizzaList.forEach((item) => {
-      if (item.indicator < best.value) best.id = item.id;
+      if (item.indicator < best.value) {
+        best.id = item.id;
+        best.value = item.indicator;
+      }
+      setBestId(best.id);
     });
-    setBestId(best.id);
   };
 
-  useEffect(checkBest, [pizzaList]);
+  useEffect(checkBest);
 
   return (
     <div className="app">
