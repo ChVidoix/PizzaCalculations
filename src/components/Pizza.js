@@ -9,6 +9,11 @@ const Pizza = ({ name, id }) => {
   const [result, setResult] = useState(0);
   const { deletePizza, setIndicator, bestId } = useContext(AppContext);
 
+  const imgStyle = {
+    width: `${size * 6}px`,
+    maxWidth: "300px",
+  };
+
   const handleInputChange = (e) => {
     if (e.target.name === "price") {
       setPrice(e.target.value);
@@ -61,7 +66,9 @@ const Pizza = ({ name, id }) => {
         />
       </div>
       <div className="result">
-        <img src={pizzaImg} alt="Pizza img" />
+        <div>
+          <img src={pizzaImg} alt="Pizza img" style={imgStyle} />
+        </div>
         <h3>{result} zł/m2</h3>
       </div>
     </div>

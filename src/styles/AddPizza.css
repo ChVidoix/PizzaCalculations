@@ -29,4 +29,5 @@ button:focus {
   height: 1.5rem;
   text-transform: uppercase;
   font-weight: 550;
+  margin-top: 2px;
 }
