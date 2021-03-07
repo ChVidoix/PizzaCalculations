@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+## Have a glimpse at the app at the link: 
+
+https://pizzonator.netlify.app/
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
