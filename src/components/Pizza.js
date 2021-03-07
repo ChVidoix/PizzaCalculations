@@ -44,7 +44,7 @@ const Pizza = ({ name, id }) => {
         </button>
       </div>
       <div className="size">
-        <label htmlFor="size">Rozmiar (średnica[cm]):</label>
+        <label htmlFor="size">Rozmiar (średnica)[cm]:</label>
         <input
           type="number"
           value={size}

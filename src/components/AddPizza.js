@@ -15,6 +15,16 @@ const AddPizza = () => {
     }
   };
 
+  const handleInputChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handleEnterClick = (e) => {
+    if (e.keyCode === 13) {
+      handleClick();
+    }
+  };
+
   return (
     <div className="add">
       <button onClick={handleClick}>Dodaj pizze</button>
@@ -22,7 +32,10 @@ const AddPizza = () => {
         className="name"
         type="text"
         value={name}
-        onChange={(e) => setName(e.target.value)}
+        onKeyUp={(e) => {
+          handleEnterClick(e);
+        }}
+        onChange={(e) => handleInputChange(e)}
         maxLength={19}
         placeholder="podaj nazwę pizzy..."
       />
